@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/redeemItemImage"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:src="@drawable/americano"/>
+    <TextView
+        android:id="@+id/redeemItemName"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coffee Name"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:lineHeight="21dp"
+        android:textColor="@color/loyalty_homepage_background"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/redeemItemButton"
+        android:layout_width="76dp"
+        android:layout_height="32dp"
+        app:cardCornerRadius="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="65dp"
+        app:cardBackgroundColor="@color/loyalty_homepage_background">
+
+        <TextView
+            android:id="@+id/redeemItemPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:text="2000 pts"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

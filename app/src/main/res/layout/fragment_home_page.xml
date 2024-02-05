@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomePageFragment">
+
+    <LinearLayout
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="26dp"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="21dp"
+                android:text="Hello!"/>
+            <TextView
+                android:id="@+id/homepageUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Phong Vuong Quoc"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="110dp">
+
+            <ImageView
+                android:id="@+id/homepageCartButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignLeft="@id/detailsTitle"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/cart_icon"/>
+
+            <ImageView
+                android:id="@+id/homepageProfileButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/to_profile"
+                android:layout_gravity="center"
+                >
+
+            </ImageView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homepageLoyaltyCard"
+        android:layout_width="325dp"
+        android:layout_height="122dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="119dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/loyalty_homepage_background">
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="87dp"
+                android:layout_height="21dp"
+
+                android:text="Loyalty Card"
+                android:textColor="@color/gray"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/loyaltyCardCount"
+                android:layout_width="33dp"
+                android:layout_height="21dp"
+                android:text="4/8"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:layout_marginLeft="145dp"/>
+        </LinearLayout>
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="279dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="45dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/loyaltyCup1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="11dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="43dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="107dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="139dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="171dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="203dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="235dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+
+        </androidx.cardview.widget.CardView>
+
+        
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="279dp"
+        app:cardBackgroundColor="@color/loyalty_homepage_background">
+
+        <TextView
+            android:layout_width="157dp"
+            android:layout_height="24dp"
+            android:text="Choose your coffee"
+            android:textColor="@color/gray"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="74dp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

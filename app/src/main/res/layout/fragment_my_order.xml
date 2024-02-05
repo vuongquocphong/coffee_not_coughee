@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MyOrderFragment">
+    
+    <TextView
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:text="My Order"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="160dp"/>
+    
+    <LinearLayout
+        android:id="@+id/myOrderTabSelection"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="77dp">
+        
+        <TextView
+            android:id="@+id/onGoingOrderTab"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:text="On going"
+            android:layout_marginLeft="82dp"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:textColor="@color/loyalty_homepage_background"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/historyOrderTab"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="108dp"
+            android:text="History"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:textColor="@color/gray"/>
+        
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/onGoingOrderRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/myOrderTabSelection"
+        android:layout_marginTop="25dp"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="120dp"
+        android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyOrderRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/myOrderTabSelection"
+        android:layout_marginTop="25dp"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="120dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

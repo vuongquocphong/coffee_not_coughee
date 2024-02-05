@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SplashFragment">
+
+    <fragment
+        android:id="@+id/SplashFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.SplashFragment"
+        android:label="@string/splash_fragment_label"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_SplashFragment_to_HomePageFragment"
+            app:destination="@id/HomePageFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/CoffeeDetailFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.CoffeeDetailFragment"
+        android:label="@string/coffee_detail_fragment_label"
+        tools:layout="@layout/fragment_coffee_detail" >
+
+        <action
+            android:id="@+id/action_CoffeeDetailFragment_to_CartFragment"
+            app:destination="@id/CartFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomePageFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.HomePageFragment"
+        android:label="@string/home_page_fragment_label"
+        tools:layout="@layout/fragment_home_page" >
+
+        <action
+            android:id="@+id/action_HomePageFragment_to_CoffeeDetailFragment"
+            app:destination="@id/CoffeeDetailFragment" />
+
+        <action
+            android:id="@+id/action_HomePageFragment_to_CartFragment"
+            app:destination="@id/CartFragment" />
+
+        <action
+            android:id="@+id/action_HomePageFragment_to_MyOrderFragment"
+            app:destination="@id/MyOrderFragment" />
+
+        <action
+            android:id="@+id/action_HomePageFragment_to_RewardFragment"
+            app:destination="@id/RewardFragment" />
+
+        <action
+            android:id="@+id/action_HomePageFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/CartFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.CartFragment"
+        android:label="@string/cart_fragment_label"
+        tools:layout="@layout/fragment_cart"
+        >
+        <action
+            android:id="@+id/action_CartFragment_to_OrderSuccessFragment"
+            app:destination="@id/OrderSuccessFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrderSuccessFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.OrderSuccessFragment"
+        android:label="@string/cart_fragment_label"
+        tools:layout="@layout/fragment_order_success">
+
+        <action
+            android:id="@+id/action_OrderSuccessFragment_to_MyOrderFragment"
+            app:destination="@id/MyOrderFragment" />
+
+        <action
+            android:id="@+id/action_OrderSuccessFragment_to_HomePageFragment"
+            app:destination="@id/HomePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MyOrderFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.MyOrderFragment"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_my_order" >
+
+        <action
+            android:id="@+id/action_MyOrderFragment_to_HomePageFragment"
+            app:destination="@id/HomePageFragment"
+            />
+        <action
+            android:id="@+id/action_MyOrderFragment_to_RewardFragment"
+            app:destination="@id/RewardFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RewardFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.RewardFragment"
+        android:label="Rewards"
+        tools:layout="@layout/fragment_reward">
+        <action
+            android:id="@+id/action_RewardFragment_to_RedeemFragment"
+            app:destination="@id/RedeemFragment"
+            />
+        <action
+            android:id="@+id/action_RewardFragment_to_HomePageFragment"
+            app:destination="@id/HomePageFragment"
+            />
+        <action
+            android:id="@+id/action_RewardFragment_to_MyOrderFragment"
+            app:destination="@id/MyOrderFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+    <fragment
+        android:id="@+id/RedeemFragment"
+        android:name="com.example.coffee_not_coughee.Fragments.RedeemFragment"
+        android:label="Redeem"
+        tools:layout="@layout/fragment_redeem"
+        />
+
+</navigation>

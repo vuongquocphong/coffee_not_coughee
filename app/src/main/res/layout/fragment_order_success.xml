@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.OrderSuccessFragment">
+
+
+    <ImageView
+        android:id="@+id/orderSuccessIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="113dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/take_away" />
+
+    <TextView
+        android:id="@+id/orderSuccessTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/order_success"
+        android:textAppearance="@style/order_success"
+        android:layout_below="@+id/orderSuccessIcon"
+        />
+
+    <TextView
+        android:id="@+id/your_order_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="6sp"
+        android:text="@string/your_order_text"
+        android:textAppearance="@style/your_order_text"
+        android:translationY="-3.12sp"
+        android:layout_below="@id/orderSuccessTitle"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/backHomeButton"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:text="Back To Home"
+        android:layout_below="@id/your_order_"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        />
+
+</RelativeLayout>

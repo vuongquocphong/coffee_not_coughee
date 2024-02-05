@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.RewardFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Rewards"
+        android:textSize="16dp"
+        android:textColor="#001833"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rewardLoyaltyCard"
+        android:layout_width="325dp"
+        android:layout_height="122dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="119dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/loyalty_homepage_background">
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="87dp"
+                android:layout_height="21dp"
+
+                android:text="Loyalty Card"
+                android:textColor="@color/gray"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/loyaltyCardCount"
+                android:layout_width="33dp"
+                android:layout_height="21dp"
+                android:text="4/8"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:layout_marginLeft="145dp"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="279dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="45dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/loyaltyCup1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="11dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="43dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="107dp"
+                android:src="@drawable/loyalty_cup_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="139dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="171dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="203dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+            <ImageView
+                android:id="@+id/loyaltyCup8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="235dp"
+                android:src="@drawable/loyalty_cup_not_checked"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/rewardLoyaltyCard"
+        android:id="@+id/rewardPointCard"
+        android:layout_width="325dp"
+        android:layout_height="122dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/loyalty_homepage_background">
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="87dp"
+                android:layout_height="21dp"
+                android:text="My Points:"
+                android:textSize="16dp"
+                android:textColor="@color/gray"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rewardPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000"
+            android:textSize="24dp"
+            android:textColor="@color/gray"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="35dp"/>
+
+        <ImageView
+            android:id="@+id/redeemNavButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/redeem_btn_bg"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="45dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="400dp"
+        android:text="History Rewards"
+        android:textColor="@color/loyalty_homepage_background"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rewardHistoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginBottom="70dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+</RelativeLayout>
